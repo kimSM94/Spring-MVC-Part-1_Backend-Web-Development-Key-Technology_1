@@ -13,12 +13,12 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("/springmvc/v3/members")
+@RequestMapping("/springmvc/v3/members") // 클래스 레벨
 public class SpringMemberControllerV3 {
     private MemberRepository memberRepository = MemberRepository.getInstance();
 
 //    @RequestMapping(value = "/new-form", method = RequestMethod.GET)
-    @GetMapping("/new-form")
+    @GetMapping("/new-form") // 메소드 레벨
     public String newForm(){
         return "new-form";
     }
